@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>grids?</title>
+  <style>
+
+html {
+  box-sizing: border-box;
+}
+body {
+  background-color: lightblue;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header"
+    "side-left upper-center upper-center side-right"
+    "side-left upper-center upper-center side-right"
+    "side-left lower-center lower-center side-right"
+    "side-left lower-center lower-center side-right"
+    "bottom bottom bottom bottom";
+}
+
+.header { grid-area: header; height: 100px;
+background: pink; }
+
+.side-left { grid-area: side-left;
+background:darkgrey; }
+
+.side-right { grid-area: side-right; background: darkgrey;}
+
+.upper-center { grid-area: upper-center;
+background: grey; }
+
+.bottom { grid-area: bottom;
+background: pink;}
+
+.lower-center { grid-area: lower-center;
+background: grey; }
+
+  </style>
+</head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+      <h1>tguguguy</h1></div>
+      <div class="side-left"></div>
+      <div class="side-right"></div>
+      <div class="upper-center"></div>
+      <div class="bottom"></div>
+      <div class="lower-center"></div>
+    </div>
+
+</body>
+    </html>
